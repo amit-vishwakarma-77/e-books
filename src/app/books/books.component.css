@@ -1,0 +1,72 @@
+.genera > a> img{
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.genera{
+    display: flex;
+    text-transform: capitalize;
+    align-items: center;
+    margin: 30px 0;
+}
+.search {
+    /* height: 40px; */
+    margin: 20px 20px;
+}
+.search > label{
+    display: flex;
+    align-items: center;
+    border-radius : 4px ; 
+    background: #F0F0F6;
+    /* border: 1px solid black; */
+    height : 40px;
+}
+.search > label > img{
+    height: 20px;
+    margin: 0 10px;
+}
+.search  input{
+    border: none ;
+    background: #F0F0F6;
+    font-family: Montserrat, Regular;
+    font-weight: 600;
+    /* height: 40px; */
+}
+.search  input:focus-visible{
+    border: none;
+    outline: none
+}
+
+
+
+.books{
+    background: #F8F7FF;
+}
+
+.book-card{
+    width: 114px;
+    margin: 20px auto;
+}
+.cover> img{
+    width: 114px;
+    height: 162px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+}
+.name{
+    font-family: Montserrat, Regular;
+    font-size: 12px;
+    color: #333333;
+    font-weight: 600;
+    margin: 5px 0 5px 0;
+
+    white-space: nowrap; 
+    /* width: 50px;  */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.author{
+    font-family: Montserrat, Regular;
+    font-size: 12px;
+    color: #A0A0A0;
+}

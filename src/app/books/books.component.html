@@ -1,0 +1,58 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="genera">
+                    <a [routerLink]="[ '/']">
+                        <img src="../../assets/images/Back.svg" alt="" srcset="">
+                    </a>
+                    <div>
+                        <h2>{{genra}}</h2>
+                    </div>
+                </div>
+                <div class="search">
+                    <label>
+                        <img src="../../assets/images/Search.svg" alt="" srcset="">
+                        <input type="text" id="search" name="search" placeholder="Search"
+                            (keyup)="search($event.target)">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="books" *ngIf="books.length > 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-xs-4" *ngFor="let book of books">
+                <div class="book-card" (click)="openDoc(
+                                                book.formats['text/html; charset=utf-8'], 
+                                                book.formats['application/pdf'],
+                                                book.formats['text/plain; charset=us-ascii'],
+                                                book.formats['application/zip']
+                                                
+                ) 
+                 ">
+                    <div class="cover">
+                        <img src="{{book.formats['image/jpeg']}}">
+                    </div>
+                    <div class="name">{{book.title.toUpperCase()}}</div>
+                    <div class="author" *ngIf="book.authors[0] != undefined">{{book.authors[0].name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="not-found" *ngIf="notFound == true && books.length == 0 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align: center;">No Results Found ...</h1>
+            </div>
+        </div>
+    </div>
+</div>
